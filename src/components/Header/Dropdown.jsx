@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import { Link } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
@@ -7,14 +8,15 @@ const Dropdown = ({ currentUser, classname }) => {
     <div>
       <li className={`${classname} dropdown`}>
         <span>
-          {"Hi " + currentUser.displayName} <i class='fas fa-caret-down'></i>
+          {"Hi " + currentUser.displayName}{" "}
+          <i className="fas fa-caret-down"></i>
         </span>
 
-        <ul className='dropdown-menu'>
+        <ul className="dropdown-menu">
           <li>
-            <Link className='dropdown-item' onClick={() => auth.signOut()}>
+            <a className="dropdown-item" onClick={() => auth.signOut()}>
               SIGN OUT
-            </Link>
+            </a>
           </li>
         </ul>
       </li>

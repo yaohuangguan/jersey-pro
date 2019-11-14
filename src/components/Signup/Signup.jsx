@@ -41,6 +41,9 @@ class Signup extends React.Component {
       });
     } catch (error) {
       console.log(error);
+      this.setState({
+        errors: error.message
+      });
     }
   };
   handleChange = e => {
