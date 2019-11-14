@@ -22,9 +22,14 @@ const Header = ({ currentUser }) => {
         {currentUser ? (
           <Dropdown classname={"option"} currentUser={currentUser} />
         ) : (
-          <Link className="option" to="/signin">
-            登录
-          </Link>
+          <>
+            <Link className="option" to="/signin">
+              登录
+            </Link>
+            <Link className="option" to="/signup">
+              注册
+            </Link>
+          </>
         )}
       </div>
     </div>

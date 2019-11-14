@@ -22,34 +22,38 @@ class Signin extends React.Component {
   };
   render() {
     return (
-      <div className='sign-in col-md-4'>
-        <h2 className='h3-responsive font-weight-bold text-center my-4'>
-          Sign in with your email and password
+      <div className="sign-in">
+        <h2 className="h3-responsive text-center my-4">
+          SIGN IN WITH EMAIL AND PASSWORD
         </h2>
 
         <form onSubmit={this.handleSubmit}>
           <FormInput
-            type='email'
-            name='email'
+            type="email"
+            name="email"
             value={this.state.email}
-            id='email'
-            label='邮箱 email'
+            id="email"
+            label=" email"
             handleChange={this.handleChange}
             required
           />
           <FormInput
-            type='password'
-            name='password'
-            label='密码 password'
+            type="password"
+            name="password"
+            label="password"
             value={this.state.password}
             handleChange={this.handleChange}
-            id='password'
+            id="password"
             required
           />
-          <div className='btn-group '>
-            <input type='submit' className='btn btn-success mr-4' />
+          <div className="btn-group ">
+            <input
+              type="submit"
+              className="btn btn-success mr-4"
+              value="SUBMIT"
+            />
             <Button onClick={googleSignIn}>
-              <i className='fab fa-google'></i> Sign in with Google
+              <i className="fab fa-google"></i> Sign in with google
             </Button>
           </div>
         </form>
